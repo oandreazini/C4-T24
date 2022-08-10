@@ -1,8 +1,9 @@
-package service;
+package com.example.demo.service;
 
 import java.util.List;
 
-import dto.Trabajador;
+import com.example.demo.dto.Trabajador;
+
 
 public interface ITrabajadorService {
 	

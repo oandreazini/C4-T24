@@ -1,4 +1,4 @@
-package controller;
+package com.example.demo.controller;
 
 import java.util.List;
 
@@ -12,8 +12,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import dto.Trabajador;
-import service.TrabajadorServiceImpl;
+import com.example.demo.dto.Trabajador;
+import com.example.demo.service.TrabajadorServiceImpl;
+
+
 
 
 @RestController
@@ -24,21 +26,22 @@ public class TrabajadorController {
 	TrabajadorServiceImpl trabajadorServideImpl;
 	
 	@GetMapping("/trabajadores")
-	public List<Trabajador> listarClientes(){
+	public List<Trabajador> listarTrabajador(){
 		return trabajadorServideImpl.listarTrabajador();
 	}
 	
-	//listar Clientes por campo nombre
+	//listar Trabajadores por campo nombre
 	@GetMapping("/trabajadores/nombre/{nombre}")
-	public List<Trabajador> listarClienteNombre(@PathVariable(name="nombre") String nombre) {
+	public List<Trabajador> listarTrabajadorNombre(@PathVariable(name="nombre") String nombre) {
 	    return trabajadorServideImpl.listarTrabajadorNomnbre(nombre);
 	}
 	
 	
 	@PostMapping("/trabajadores")
-	public Trabajador salvarCliente(@RequestBody Trabajador trabajador) {
+	public Trabajador guardarTrabajador(@RequestBody Trabajador trabajador) {
+		Trabajador trabajador_id= new Trabajador(trabajador.getNombre(), trabajador.getTrabajador());
 		
-		return trabajadorServideImpl.guardarTrabajador(trabajador);
+		return trabajadorServideImpl.guardarTrabajador(trabajador_id);
 	}
 	
 	
@@ -57,25 +60,24 @@ public class TrabajadorController {
 	@PutMapping("/trabajadores/{id}")
 	public Trabajador actualizarTrabajador(@PathVariable(name="id")Long id,@RequestBody Trabajador trabajador) {
 		
-		Trabajador trabajador_seleccionado= new Trabajador();
-		Trabajador trabajador_actualizado= new Trabajador();
+		Trabajador trabajador_seleccionado;
+		Trabajador trabajador_actualizado;
 		
 		trabajador_seleccionado= trabajadorServideImpl.trabajadorID(id);
 		
 		trabajador_seleccionado.setNombre(trabajador.getNombre());
-		trabajador_seleccionado.setSalario(trabajador.getSalario());
 		trabajador_seleccionado.setTrabajador(trabajador.getTrabajador());
 	
 		
 		trabajador_actualizado = trabajadorServideImpl.actualizarTrabajador(trabajador_seleccionado);
 		
-		System.out.println("El cliente actualizado es: "+ trabajador_actualizado);
+		System.out.println("El trabajador actualizado es: "+ trabajador_actualizado);
 		
 		return trabajador_actualizado;
 	}
 	
-	@DeleteMapping("/clientes/{id}")
-	public void eleiminarCliente(@PathVariable(name="id")Long id) {
+	@DeleteMapping("/trabajadores/{id}")
+	public void eliminarTrabajador(@PathVariable(name="id")Long id) {
 		trabajadorServideImpl.eliminarTrabajador(id);
 	}
 	

@@ -1,13 +1,13 @@
-package MainApp;
+package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Ta24Application {
+public class T24Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Ta24Application.class, args);
+		SpringApplication.run(T24Application.class, args);
 	}
 
 }

@@ -1,12 +1,13 @@
-package service;
+package com.example.demo.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import dao.ITrabajadorDAO;
-import dto.Trabajador;
+import com.example.demo.dao.ITrabajadorDAO;
+import com.example.demo.dto.Trabajador;
+
 
 @Service
 public class TrabajadorServiceImpl implements ITrabajadorService{
