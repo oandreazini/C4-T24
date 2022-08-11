@@ -81,11 +81,11 @@ public class TrabajadorController {
 		trabajadorServideImpl.eliminarTrabajador(id);
 	}
 	
-	@GetMapping("/trabajadores/trabajador/{trabajador}")
-	public List<Trabajador> listarTrabajadortrabajador(@PathVariable(name="trabajador") String trabajador) {
-		
-		 return trabajadorServideImpl.listarTrabajadortrabajador(trabajador);
-	}
+//	@GetMapping("/trabajadores/trabajador/{trabajador}")
+//	public List<Trabajador> listarTrabajadortrabajador(@PathVariable(name="trabajador") String trabajador) {
+//		
+//		 return trabajadorServideImpl.listarTrabajadortrabajador(trabajador);
+//	}
 	
 
 }

@@ -54,10 +54,10 @@ public class TrabajadorServiceImpl implements ITrabajadorService{
 		return iTrabajadorDAO.findByNombre(trabajador);
 	}
 
-	@Override
-	public List<Trabajador> listarTrabajadortrabajador(String trabajador) {
-		
-		return iTrabajadorDAO.buscarTrabajador(trabajador);
-	}
+//	@Override
+//	public List<Trabajador> listarTrabajadortrabajador(String trabajador) {
+//		
+//		return iTrabajadorDAO.buscarTrabajador(trabajador);
+//	}
 
 }
