@@ -14,11 +14,13 @@ public interface ITrabajadorService {
 	
 	public Trabajador trabajadorID(Long id); //Leer datos de un trabajador READ
 	
-	public List<Trabajador> listarTrabajadorNomnbre(String nombre);//Listar Trabajador por campo nombre
+	public List <Trabajador> listarTrabajadorNomnbre(String nombre);//Listar Trabajador por campo nombre
 	
 	public Trabajador actualizarTrabajador(Trabajador trabajador); //Actualiza datos del trabajador UPDATE
 	
 	public void eliminarTrabajador(Long id);// Elimina el trabajador DELETE
+	
+	public List <Trabajador> listarTrabajadortrabajador(String trabajador); 
 	
 
 }

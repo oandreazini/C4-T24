@@ -23,7 +23,6 @@ public class Trabajador {
 	@Enumerated(EnumType.STRING)
 	@Column(name = "trabajador")
 	private ResourceType trabajador;
-
 	public enum ResourceType {
 		programador, deveops, analista
 	}

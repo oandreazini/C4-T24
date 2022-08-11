@@ -49,9 +49,15 @@ public class TrabajadorServiceImpl implements ITrabajadorService{
 	}
 
 	@Override
-	public List<Trabajador> listarTrabajadorNomnbre(String nombre) {
+	public List<Trabajador> listarTrabajadorNomnbre(String trabajador) {
 		
-		return iTrabajadorDAO.findByNombre(nombre);
+		return iTrabajadorDAO.findByNombre(trabajador);
+	}
+
+	@Override
+	public List<Trabajador> listarTrabajadortrabajador(String trabajador) {
+		
+		return iTrabajadorDAO.buscarTrabajador(trabajador);
 	}
 
 }
