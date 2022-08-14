@@ -80,12 +80,5 @@ public class TrabajadorController {
 	public void eliminarTrabajador(@PathVariable(name="id")Long id) {
 		trabajadorServideImpl.eliminarTrabajador(id);
 	}
-	
-//	@GetMapping("/trabajadores/trabajador/{trabajador}")
-//	public List<Trabajador> listarTrabajadortrabajador(@PathVariable(name="trabajador") String trabajador) {
-//		
-//		 return trabajadorServideImpl.listarTrabajadortrabajador(trabajador);
-//	}
-	
 
 }

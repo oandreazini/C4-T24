@@ -20,6 +20,7 @@ public class Trabajador {
 	private Long id;
 	@Column(name = "nombre")
 	private String nombre;
+	
 	@Enumerated(EnumType.STRING)
 	@Column(name = "trabajador")
 	private ResourceType trabajador;

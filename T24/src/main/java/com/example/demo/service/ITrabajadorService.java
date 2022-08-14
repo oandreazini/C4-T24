@@ -18,9 +18,6 @@ public interface ITrabajadorService {
 	
 	public Trabajador actualizarTrabajador(Trabajador trabajador); //Actualiza datos del trabajador UPDATE
 	
-	public void eliminarTrabajador(Long id);// Elimina el trabajador DELETE
-	
-	public List <Trabajador> listarTrabajadortrabajador(String trabajador); 
-	
+	public void eliminarTrabajador(Long id);// Elimina el trabajador DELETE	
 
 }
