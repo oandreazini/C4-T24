@@ -1,6 +1,6 @@
 # C4-T24
 
-#### Este repositorio está compuesto por 1 rama (main), donde alamcena el proyecto creado desde Spring Tools Suite 4.
+#### Este repositorio está compuesto por 1 rama (main), donde almacena el proyecto creado desde Spring Tools Suite 4.
 
 ## Endpoints
 ```
